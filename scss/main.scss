@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,11 @@
 body {
   @include background;
   background: $primary-color;
+  @mixin mediaSm {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
   color: #fff;
   height: 100%;
   margin: 0;
